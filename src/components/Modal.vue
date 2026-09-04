@@ -1,0 +1,2 @@
+<script setup lang="ts">defineProps<{title:string}>(); defineEmits<{(e:"close"):void}>();</script>
+<template><div class="overlay" @click.self="$emit('close')"><section class="modal"><div class="modal-head"><h2>{{title}}</h2><button @click="$emit('close')">×</button></div><slot/><button @click="$emit('close')">Continue</button></section></div></template>
